@@ -59,11 +59,14 @@ class Point(object):
         return Point(self.x, self.y)
 
     def move_to(self, dx, dy):
+        self.total = self.total + self.get_distance_from(Point(dx, dy))
         self.x = dx
         self.y = dy
         self.moves  = self.moves + 1
 
+
     def move_by(self, dx, dy):
+        self.total = self.total + self.get_distance_from((Point(self.x + dx, self.y + dy)))
         self.x = self.x + dx
         self.y = self.y + dy
         self.moves = self.moves + 1
