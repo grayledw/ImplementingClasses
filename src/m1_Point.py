@@ -48,6 +48,7 @@ class Point(object):
         self.moves = 0
         self.startx = x
         self.starty = y
+        self.total = 0
 
 
     def __repr__(self):
@@ -81,7 +82,8 @@ class Point(object):
         return self.get_distance_from(Point(self.startx, self.starty))
 
     def get_distance_traveled(self):
-        
+        return self.total
+
 
 
 
